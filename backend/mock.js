@@ -1,4 +1,4 @@
-export const cards = [{
+const cards = [{
     id: 0,
     title: "我的漏风的袄",
     content: "结婚，是我最辈子受过最大的屈辱。 27岁，一年前做了家庭主妇，带着2个孩子，现在肚子里还有一个。 昨天晚上，我告诉老公，明天要去体检，需要钱，没...",
@@ -32,7 +32,7 @@ export const cards = [{
     likes: 501
 }];
 
-export const authors = [{
+const authors = [{
     thumbnailUrl: "https://upload.jianshu.io/users/upload_avatars/4790772/388e473c-fe2f-40e0-9301-e357ae8f1b41.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp",
     name: "茶点故事",
     description: "写了4376.3k字 · 17k喜欢"
@@ -52,7 +52,7 @@ export const authors = [{
     description: "写了43.5k字 · 803喜欢"
 }];
 
-export const articles = [{
+const articles = [{
     title: "我的漏风的袄",
     likes: 5098,
     author: "感冒的梵高",
@@ -97,3 +97,5 @@ export const articles = [{
     ip_location: "北京",
     paragraphs: ["早上，锻炼身体回来的路上，听到一位大爷骂骂咧咧说：“某某在他的田地的小房子里上吊自杀。”", "原来自杀的是一个六十多岁的妇女，前几年她爱人在洗澡过程中，脑梗塞去世。他们有一对儿女，女儿大已经出嫁，儿子还没有结婚。这样母子两个人过着日子，还是幸福的。", "能活着就是我们每个人的福份，更何况经历了那么多，自己与病痛抗争那么久，才能有现在的状况，为什么不珍惜，不感恩，不坚强地活下去，而选择了放弃，选择用这种方式结束生命？", "而这些是站在对生命的珍惜这个角度来说的。愿每个人都好好珍惜这来之不易的生命！", "对于她的自杀，大多数人是表示惋惜，说好不容易能挽救生活。现在能自己行走，生活能自理，就是不幸中的万幸，怎么还想不开，走这条不归路？", "我们不能评价她是对是错，也不知道她面对的是什么，所以也不能去做出任何评论。", "而这些是站在对生命的珍惜这个角度来说的。愿每个人都好好珍惜这来之不易的生命！", "前不久，她生病了，颈椎坏死，导致双手不能听使唤，住院治疗。经过众筹和亲戚朋友帮助下，终于治愈回家疗养。听说现在病情稳定，情况越来越好，可为什么还要自杀呢？"]
 }]
+
+module.exports = { cards, authors, articles };
