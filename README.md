@@ -27,3 +27,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `node ./backend/app.js`
 
 Starts the Express.js backend
+
+## Demo GIF
+<img src="https://raw.githubusercontent.com/stephenbutters/simple-book/master/demo.gif" width="731" height="658"/>
