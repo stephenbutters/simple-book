@@ -2,31 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Deployment Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `docker network create simple-book-network`
+Create a docker network.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `docker pull mongo`
+Get the MongoDB docker image.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `docker run --name mongodb -d -p 27017:27017 --net simple-book-network mongo`
+Run the MongoDB container.
 
-### `npm run build`
+### `docker pull stephenbutters/simple-book-app`
+Get the simple app docker image
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `docker run --name simple-app -p 49160:4000 -d --net simple-book-network stephenbutters/simple-book-app`
+Run the simple app container
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `node ./backend/app.js`
-
-Starts the Express.js backend
+## Now the web is available via `http://localhost:49160/`
 
 ## Demo GIF
 <img src="https://raw.githubusercontent.com/stephenbutters/simple-book/master/demo.gif" width="731" height="658"/>

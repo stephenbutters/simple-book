@@ -13,7 +13,7 @@ class Author extends React.Component<AuthorData> {
             <div className='author-container'>
                 <img className='thumbnail' src={this.props.thumbnailUrl} alt='thumbnail'></img>
                 <span className='follow'><i className="fa-solid fa-plus"></i>关注</span>
-                <a className='name' href='/u'>{this.props.name}</a>
+                <a className='name' href='/'>{this.props.name}</a>
                 <p>{this.props.description}</p>
             </div>
         );

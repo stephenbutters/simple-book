@@ -23,7 +23,7 @@ class Card extends React.Component<CardProps> {
                         <i className="fa-regular fa-gem"></i>
                         {" " + this.props.diamond + " "}
                     </span>
-                    <a className='author' target='_blank' href='/u'>{this.props.author}</a>
+                    <a className='author' target='_blank' href='/'>{this.props.author}</a>
                     <span className='comment'>
                         <i className="fa-solid fa-comment"></i>
                         {" " + this.props.comments + " "}

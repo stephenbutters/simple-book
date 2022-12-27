@@ -18,13 +18,13 @@ class List extends React.Component<{}, ListState> {
     }
 
     async componentDidMount() {
-        const cardResponse = await fetch("http://localhost:4000/api/cards");
+        const cardResponse = await fetch("http://localhost:49160/api/cards");
         let cardData = await cardResponse.json();
         if (!cardData) {
             cardData = [];
         }
 
-        const authorResponse = await fetch("http://localhost:4000/api/authors");
+        const authorResponse = await fetch("http://localhost:49160/api/authors");
         let authorData = await authorResponse.json();
         if (!authorData) {
             authorData = [];
@@ -42,6 +42,7 @@ class List extends React.Component<{}, ListState> {
                 <div className="list-container">
                     {this.state.cards.map(item => (
                         <Card 
+                            key={item.id}
                             id={item.id}
                             title={item.title}
                             content={item.content}
@@ -56,6 +57,7 @@ class List extends React.Component<{}, ListState> {
                     <span className='author-title'>推荐作者</span>
                     {this.state.authors.map(author => (
                         <Author
+                            key={author.name}
                             thumbnailUrl={author.thumbnailUrl}
                             name={author.name}
                             description={author.description}

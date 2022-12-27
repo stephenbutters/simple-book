@@ -42,7 +42,7 @@ class Detail extends React.Component<DetailProps, DetailState> {
 
     async componentDidMount() {
         const { id } = this.props.params;
-        const response = await fetch("http://localhost:4000/api/article?id=" + id);
+        const response = await fetch("http://localhost:49160/api/article?id=" + id);
         const data = await response.json();
         this.setState({ article: data });
     }
